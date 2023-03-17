@@ -1,4 +1,4 @@
-package com.example.firebaseproject
+package com.example.firebaseproject.activity
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.firebaseproject.dataClass.EmployeeInfo
+import com.example.firebaseproject.R
 import com.google.firebase.database.*
 
 
