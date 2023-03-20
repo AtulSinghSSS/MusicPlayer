@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.firebaseproject.R
-import com.example.firebaseproject.databinding.FragmentHomeBinding
 import com.example.firebaseproject.adapter.ContinueListeningAdapter
 import com.example.firebaseproject.adapter.RecentListeningAdapter
 import com.example.firebaseproject.adapter.TopMixesAdapter
+import com.example.firebaseproject.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
     lateinit var mBinding:FragmentHomeBinding
@@ -37,11 +37,11 @@ class HomeFragment : Fragment() {
         continueListeningAdapter= ContinueListeningAdapter(this)
         mBinding.rvListView.adapter = continueListeningAdapter
 
-        continueListeningAdapter= ContinueListeningAdapter(this)
-        mBinding.rvListView2.adapter = continueListeningAdapter
+        topMixesAdapter= TopMixesAdapter(this)
+        mBinding.rvListView2.adapter = topMixesAdapter
 
-        continueListeningAdapter= ContinueListeningAdapter(this)
-        mBinding.rvListView3.adapter = continueListeningAdapter
+        recentListeningAdapter= RecentListeningAdapter(this)
+        mBinding.rvListView3.adapter = recentListeningAdapter
     }
 
 }

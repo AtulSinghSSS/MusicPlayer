@@ -31,7 +31,7 @@ class ContinueListeningAdapter(homeFragment: HomeFragment) : RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int {
-        return 15
+        return 10
     }
 
     class ViewHolder(var mBinding: ContinueListeningBinding) :
