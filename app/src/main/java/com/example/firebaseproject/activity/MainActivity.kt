@@ -1,14 +1,15 @@
 package com.example.firebaseproject.activity
 
+/*import com.example.firebaseproject.dataClass.EmployeeInfo*/
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.firebaseproject.dataClass.EmployeeInfo
 import com.example.firebaseproject.R
-import com.google.firebase.database.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MainActivity : AppCompatActivity(){
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(){
     private lateinit var sendDatabtn: Button
     var firebaseDatabase: FirebaseDatabase? = null
     var databaseReference: DatabaseReference? = null
-    lateinit var employeeInfo: EmployeeInfo
+   /* lateinit var employeeInfo: EmployeeInfo*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity(){
                 Toast.makeText(this@MainActivity, "Please add some data.", Toast.LENGTH_SHORT)
                     .show()
             } else {
-                addDatatoFirebase(name, phone, address)
+              /*  addDatatoFirebase(name, phone, address)*/
             }
         }
 
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity(){
         //    databaseReference!!.addChildEventListener{}
     }
 
-    private fun addDatatoFirebase(name: String, phone: String, address: String) {
+   /* private fun addDatatoFirebase(name: String, phone: String, address: String) {
         val employeeId = System.currentTimeMillis()
         employeeInfo = EmployeeInfo(employeeId,name, phone, address)
         databaseReference!!.addValueEventListener(object : ValueEventListener {
@@ -71,5 +72,5 @@ class MainActivity : AppCompatActivity(){
             }
         })
 
-    }
+    }*/
 }

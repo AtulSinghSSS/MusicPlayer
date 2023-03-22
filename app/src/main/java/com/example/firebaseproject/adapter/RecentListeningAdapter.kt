@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firebaseproject.R
-import com.example.firebaseproject.databinding.ContinueListeningBinding
 import com.example.firebaseproject.databinding.RecentListeningBinding
 import com.example.firebaseproject.fragment.HomeFragment
 
