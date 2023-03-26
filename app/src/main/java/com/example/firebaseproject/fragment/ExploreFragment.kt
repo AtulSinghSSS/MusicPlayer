@@ -48,25 +48,6 @@ class ExploreFragment : Fragment() {
     }
 
     private fun CallFun() {
-      /*  var uriStr = "android.resource://"+ "com.example.phone"+ "/" + "raw/file_example_audio";
-        var uri = Uri.parse(uriStr)
-        mediaPlayer = MediaPlayer.create(activity,uri)*/
-
-        var selection = MediaStore.Audio.Media.IS_MUSIC + " != 0"
-        var projection = arrayOf(
-            MediaStore.Audio.Media._ID,
-            MediaStore.Audio.Media.ARTIST, MediaStore.Audio.Media.TITLE,
-            MediaStore.Audio.Media.DATA, MediaStore.Audio.Media.DISPLAY_NAME,
-            MediaStore.Audio.Media.DURATION
-        )
-
-       var cursor = activity.managedQuery(
-            MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection, null, null
-        )
-
-        while (cursor.moveToNext()) {
-            songs.add((cursor.getString(0)+ cursor.getString(1)))
-        }
         // Start the media player
        mBinding.llplay.setOnClickListener{
             if(pause){
